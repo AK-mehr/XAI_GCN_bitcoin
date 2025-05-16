@@ -8,6 +8,8 @@ from models import GCNSequential
 from models.layers import GCNLayer
 
 
+print('hello')
+
 def str2bool(v):
     if isinstance(v, bool):
         return v
