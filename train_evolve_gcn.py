@@ -29,10 +29,10 @@ parser.add_argument("--datadir_path", type=str, default="elliptic_bitcoin_datase
 parser.add_argument("--test_portion", type=float, default=0.3)
 parser.add_argument("--filter_unknown", type=str2bool, default=False)
 parser.add_argument("--local_features_only", type=str2bool, default=True)
-parser.add_argument("--use_scaler", type=str2bool, default=True)
+parser.add_argument("--use_scaler", type=str2bool, default=False)
 parser.add_argument("--use_anova", type=str2bool, default=False)
 parser.add_argument("--n_anova_features", type=int, default=50)
-parser.add_argument("--use_pca", type=str2bool, default=True)
+parser.add_argument("--use_pca", type=str2bool, default=False)
 parser.add_argument("--n_pca_components", type=int, default=30)
 parser.add_argument("--use_svd", type=str2bool, default=False)
 parser.add_argument("--n_svd_components", type=int, default=30)
@@ -49,8 +49,8 @@ ONLY_LOCAL_FEATURE = False
 CLASS_WEIGTHS = [0.7,0.29,0.01]
 NUM_ROLLS = 4
 TEST_SHARE = 0.3
-NUM_EPOCH = 5
-LEARNING_RATE = 1e-3
+NUM_EPOCH = args.num_epoch
+LEARNING_RATE = args.learning_rate
 
 
 def reset_metrics(list_of_metrics):
